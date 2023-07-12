@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title> Introducción al desarrollo web </title>
+</head>
+<body>
+    <div class="titulos">
+        <h1> CURRÍCULUM WEB </h1>
+        <h2> ¡Hola Mundo! </h2>
+    </div>
+    <br>
+    <div class="listadesordenada">
+      <div class="navbar">
+        <ul>
+          <li>
+            <a href="Proyectos">PROYECTOS</a>
+              <div class="dropdown-content">
+                <a class="enlace" href="https://github.com/Hiro1818/" target="_blank">GitHub</a>
+              </div>
+          </li>
+          <li>
+            <a href="Redes">REDES</a>
+              <div class="dropdown-content">
+                <a class="enlace" href="https://www.linkedin.com/in/diamela-simoni/" target="_blank">LinkedIn</a>
+              </div>
+          </li>
+          <li>
+            <a href="Contacto">CONTACTO</a>
+              <div class="dropdown-content">
+                <script>
+                  class Enlace {
+                    constructor() {
+                      this.enlace = document.getElementById('correo-enlace');
+                      this.enlace.addEventListener('click', this.abrirGmail);
+                    }
+                    abrirGmail(event) {
+                      event.preventDefault();
+                        const destinatario = 'diamelahiromi@gmail.com';
+                        const asunto = encodeURIComponent('Asunto del correo');
+                        const cuerpo = encodeURIComponent('Contenido del correo');
+                        const url = `https://mail.google.com/mail/?view=cm&to=${destinatario}&su=${asunto}&body=${cuerpo}`;
+                        window.open(url, '_blank');
+                    }
+                  }
+                    window.addEventListener('load', () => {
+                      new Enlace();
+                        });
+                </script>
+            <a href="Gmail" id="correo-enlace">Gmail</a>
+          </li>
+          <li>
+            <a href="Currículum">CURRÍCULUM</a>
+              <div class="dropdown-content">
+                <a class="pagina" href="page1.html" target="_blank"> Ver online</a>
+              </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <img class="foto" src="images/Fotopublicitaria.jpg" alt="Foto de perfil de Hiromí">
+       <p>Soy Diamela Simoni, estudiante avanzada de la Lic. en Diseño y Producción Audiovisual. En la actualidad, me encuentro perfeccionando mis conocimientos en el mundo IT. Mi mayor desafío profesional es insertarme en el mercado y crecer dentro de la compañía que me contrate. En un ámbito como es el de la tecnología, que avanza rápida y constantemente, me propongo estar en continua formación y aprendizaje, siempre con proactividad y compromiso para lo que se presente. Me considero una persona curiosa, detallista, emprendedora, también me caracterizo por resolver problemas de una manera práctica y creativa.</p> 
+    </div>
+    <div class="containerc">
+      <div class="column1">
+        <div class="listaordenada">
+          <ol>
+            <div class="containern">
+              <div class="sidebar">
+                <h3> Estudios realizados: </h3>
+                  <li>Base de Datos: Julio 2023</li>
+                  <li>JAVA: Julio 2023.</li>
+                  <li>GitHub: Junio 2023.</li>
+                  <li>Python Fullstack: Marzo a Julio 2023.</li>
+                  <li>.Net Developer: Mayo a Noviembre 2022.</li>
+                  <li>Lic. en Diseño y Prod. Audiovisual (En trámite).</li>
+              </div>
+            </div>    
+          </ol>
+        </div>
+      </div>
+      <div class="column2">
+        <div class="gallery">
+          <img src="images/Certificado Base de Datos.png" alt="Base de Datos">
+            <img src="images/Certificado JAVA.png" alt="JAVA">
+            <img src="images/Certificado GitHub.png" alt="GitHub">
+            <img src="images/certificado net.png" alt=".Net Developer">
+        </div>
+      </div>
+    </div>
+</body>
+</html>

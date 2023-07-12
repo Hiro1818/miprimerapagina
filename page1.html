@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Currículum</title>
+</head>
+<body>
+    <div class="listadesordenada">
+        <div class="navbar">
+          <ul>
+            <li>
+              <a href="Proyectos">PROYECTOS</a>
+                <div class="dropdown-content">
+                  <a class="enlace" href="https://github.com/Hiro1818/" target="_blank">GitHub</a>
+                </div>
+            </li>
+            <li>
+              <a href="Redes">REDES</a>
+                <div class="dropdown-content">
+                  <a class="enlace" href="https://www.linkedin.com/in/diamela-simoni/" target="_blank">LinkedIn</a>
+                </div>
+            </li>
+            <li>
+              <a href="Contacto">CONTACTO</a>
+                <div class="dropdown-content">
+                  <script>
+                    class Enlace {
+                      constructor() {
+                        this.enlace = document.getElementById('correo-enlace');
+                        this.enlace.addEventListener('click', this.abrirGmail);
+                      }
+                      abrirGmail(event) {
+                        event.preventDefault();
+                          const destinatario = 'diamelahiromi@gmail.com';
+                          const asunto = encodeURIComponent('Asunto del correo');
+                          const cuerpo = encodeURIComponent('Contenido del correo');
+                          const url = `https://mail.google.com/mail/?view=cm&to=${destinatario}&su=${asunto}&body=${cuerpo}`;
+                          window.open(url, '_blank');
+                      }
+                    }
+                      window.addEventListener('load', () => {
+                        new Enlace();
+                          });
+                  </script>
+              <a href="Gmail" id="correo-enlace">Gmail</a>
+            </li>
+            <li>
+                <a class="pagina" href="index.html">INICIO</a> 
+            </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    <div class="columnas">
+        <div class="columna">
+            <img src="images/carta1.png" alt="Carta de presentación" width="330">
+        </div>
+        <div class="columna">
+            <img src="images/cv2 .png" alt="Currículum" width="330">
+                <div class="botones">
+                    <button onclick="descargarPDF()">DESCARGAR PDF</button>
+                    <a href="index.html"><button>INICIO</button></a>
+                </div>
+        </div>
+        <div class="columna">
+            <img src="images/certificados3.png" alt="Certificados" width="330">
+        </div>
+    </div>
+<script>
+    function descargarPDF() {
+        var enlace = document.createElement('a');
+        enlace.href = 'images/CV.pdf';
+        enlace.target = '_blank';
+        enlace.download = 'CV Simoni.pdf';
+        enlace.click();
+    } 
+</script>
+</body>
+</html>
